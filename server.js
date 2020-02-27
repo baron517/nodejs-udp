@@ -19,6 +19,8 @@ server.on('message',function (msg, rinfo) {
 	
 	
 	//get 请求外网
+	
+	/*
 	http.get('http://127.0.0.1:9001?name='+msg,function(req,res){
 		var html='';
 		req.on('data',function(data){
@@ -28,6 +30,7 @@ server.on('message',function (msg, rinfo) {
 			console.info(html);
 		});
 	});
+	*/
 	
 	
 	
@@ -41,7 +44,7 @@ server.on('message',function (msg, rinfo) {
     var address = server.address();
     console.log('服务器开始监听。地址信息为&j',address);
 });*/
-server.bind(3000,'localhost',function () {
+server.bind(8000,'localhost',function () {
     //bind方法中也可以不写回调函数，单独监听listening事件
     var address = server.address();
     console.log('服务器开始监听。地址信息为&j',address);

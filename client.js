@@ -1,8 +1,8 @@
 /*创建简单的UDP客户端*/
 var dgram = require('dgram');
-var mess = new Buffer('xycj1play');
+var mess = new Buffer('pause');
 var client = dgram.createSocket('udp4');
-client.send(mess,0,mess.length,3000,'localhost',function (err, bytes) {
+client.send(mess,0,mess.length,8000,'localhost',function (err, bytes) {
     if(err)
         console.log('发送数据失败');
     else {
